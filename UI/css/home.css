@@ -1,0 +1,474 @@
+body {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    position: sticky;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 10
+}
+
+.nav-links{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-size: 20px;
+    padding: 5px 10px;
+    font-family: roboto mono;
+    text-transform: capitalize;
+}
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    padding: 10px 20px;   
+}
+.nav-links a:hover{
+    background-color: rgba(100, 189, 85, 0.9);
+    color: white;
+    cursor: pointer;
+}
+.fa-bars{
+    display:none;
+    float: right;
+    margin-top: 20px;
+    right: 30px;
+    position: absolute;
+    font-size: 30px;
+}
+.fa-bars:hover{
+    cursor: pointer;
+    font-size: 40px;
+    opacity: 0.5;
+}
+.main{
+    height:auto;
+    display: flex;
+    padding: 10% 5%;
+    position: relative;
+    background-image: url(../assets/kigali\ kacks.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.main::after{
+    content: "";
+    display: block;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0,0,0.5);
+    z-index: 0;
+}
+.main img{
+    margin-left: 10%;
+    width: 250px;
+    height: 260px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.main-text{
+    width: 55%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+   
+}
+.main-text p{
+    font-size: 30px;
+    font-family: roboto mono;
+    text-align: left;
+    color: #ccc;
+}
+.main-text a{
+    color: white;
+    width: auto;
+    padding: 10px 30px;
+    background: rgba(100, 189, 85, 0.9);
+    border-radius: 50px;
+    font-size: 30px;
+    font-family: roboto mono;
+    left: 1;
+    right: 1;
+    text-align: center;
+    text-decoration: none;
+}
+.main-text a:hover{
+    color: black;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#about{
+height: fit-content;
+display: flex;
+/* padding: 5%; */
+flex-direction: column;
+margin-bottom: 30px;
+}
+
+
+
+#about h3{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    font-family: roboto condensed;
+}
+.about-main{
+    display: flex;
+    width: 100%;
+}
+.about-main p{
+    width: 45%;
+    font-size: 20px;
+    font-family: roboto mono;
+    float:left;
+    text-align: left;
+    flex: 1; 
+    margin: 10%;
+}
+.about-main img{
+    width: 50%;
+    float: right;
+    margin-right: 40px;
+}
+
+#skills{
+  width:80%;
+  display: block;
+  justify-content: center; 
+  margin-left: auto;
+  margin-right: auto;
+}
+#skills h3{
+    text-align: center;
+    font-size:30px;
+    font-family: roboto condensed;
+}
+#skills img{
+    width: 100px;
+    max-height: 100px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#contact {
+    height: fit-content;
+    width: 100%gi;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+#contact h3{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    font-family: roboto condensed;
+}
+.contacts{
+    display: flex;
+    width: 100%;
+}
+#success-msg{
+    display: none;
+    width: 60%;
+    background-color: rgba(100, 189, 85, 0.9);
+    padding: 10px ;
+    color:rgb(129, 134, 138);
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-transform: capitalize;
+}
+ .error p{
+    color: red;
+    font-size: 15px;
+    font-family: roboto mono;
+    margin-left: 20px;
+    text-align: left;
+}
+.form-control i {
+    visibility: hidden;
+}
+.success p{
+    display: none;
+}
+.success i{
+    color: green;
+    visibility: visible;
+}
+.form-control{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+   padding-bottom: 30px;
+}
+
+.form-control form{
+    width: 450px;
+    margin-top: 30px;
+    padding: 20px 10px;
+    margin-left: 30px;
+   
+}
+.form-control section{
+    margin: 20px;
+}
+.form-control label{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: roboto mono;
+    text-transform: capitalize;
+}
+.form-control input{
+    width: 80%;
+    font-size: 15px;
+    padding: 10px;
+    border:none;
+    outline: none;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+.form-control textarea{
+    outline: none;
+    width: 80%;
+    height: 75px;
+    border: none;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+
+.social-media{
+    padding-top: 10%;
+}
+.social-media img{
+    width: 50px;
+    margin: 20px;
+}
+.social-media img:hover{
+  width: 50px 
+}
+.form-control button{
+    padding: 5px 20px;
+    font-size: 25px;
+    color:black;
+    font-family: roboto mono;
+    border: rgba(100, 189, 85, 0.9) solid 2px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+}
+.form-control button:hover{
+    color: black;
+    opacity: 0.5;
+    cursor: pointer;
+}
+footer{
+    min-height: fit-content;
+    width: 100%;
+    display: flex;
+    padding-top: 15px;
+    text-align: center;
+}
+footer p{
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: roboto mono;
+    position: inherit;
+}
+.footer-icons{
+    position: absolute;
+    right: 0;
+    margin-right: 30px;    
+}
+.footer-icons img{
+    width: 30px;
+    margin: 10px 20px;
+}
+
+@media (max-width: 1100px){
+   
+    nav{
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .about-main img{
+        display: none;
+    }
+    .about-main p{
+        width: 60%;
+        font-size: 15px;
+    }
+    .about-main img{
+        display: none;
+    }
+    #skills{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;        
+    }
+    .social-media{
+        padding-top: 30px;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .form-control{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .form-control form{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+
+
+
+
+@media (max-width: 770px) {
+
+    .fa-bars{
+        display:block;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .main a{
+        font-size: 15px;
+    }
+       .nav-links{
+           width:100%;
+           height:auto;
+           text-align: center;
+           position: absolute;
+           right: 0px;
+           transition: 1000ms;
+           display: none;
+           flex-direction: column;
+           background-color: white;
+       }
+       .link{
+           margin: 10px;
+       }
+
+#about h3{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    font-family: roboto condensed;
+}
+.about-main{
+    display: flex;
+    width: 100%;
+}
+.about-main p{
+    width: 45%;
+    font-size: 20px;
+    font-family: roboto mono;
+    float:left;
+    text-align: left;
+    flex: 1; 
+    margin: 10%;
+}
+.about-main img{
+    width: 50%;
+    float: right;
+    margin-right: 40px;
+}
+footer p{
+    margin-top: 50px;
+    width:100%;
+    margin-left: 0px;
+    text-align: center;
+}
+.footer-icons{
+    position: absolute;
+    left: 0;
+}
+.footer-icons img{
+    width: 20px;
+}
+
+}
+@media (max-width: 1000px){
+    .about-main{
+        flex-direction: column;
+    }
+    .about-main p{
+        width: 60%;
+        font-size: 15px;
+    }
+    .about-main img{
+        width: 70%;
+        margin-left: 25%;
+    }
+}
+
+@media (max-width: 500px){
+    
+    .form-control{
+        width: 100%;
+        margin-left:0px;
+    }
+    .contacts {
+        width: 100%;
+        margin-left: 0;
+    }
+    .form-control form{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        background-color: white;
+    }
+    footer p{
+        font-size: 20px;
+    }
+    .footer-icons img{
+        margin: 5px 10px;
+    }
+
+}
+@media (max-width: 400px){
+    footer p{
+        font-size: 15px;
+        margin-top: 60px;
+    }
+    .form-control{
+        width: 100%;
+        background-color: white;
+    }
+    .form-control input {
+        background-color: #f2f2f2;
+    }
+}
