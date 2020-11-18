@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/admin/admin.css">
+    <title>Admin-users</title>
+</head>
+<body>
+    <nav> 
+        <div class="nav-links" id="nav">
+            <a href="../../index.html" class="link">home</a>
+            <a href="../../index.html#about" class="link">about</a>
+            <a href="../../index.html#contact" class="link">contact</a>
+            <a href="../blogHome.html" class="link">blog</a>
+            <a href="" class="join-btn">logout</a>
+            
+        </div>      
+        <i class="fa fa-bars" id="burger"></i>
+    </div>  
+    </nav>
+    <section class="main">
+        <div class="menu">
+            <ul>
+                <a href="./admin.html"><li>blog</li></a>
+                <a href="./users.html"><li> users</li></a>
+                <a href="./messages.html"><li> messages</li></a>
+                
+            </ul>
+
+        </div>
+        <div class="content">
+            <h3>manage users</h3>
+            <div class="badges">
+                <button href="./" id="accordion">add User</button>
+                <p>subscribed users <span class="subscribed">32</span></p>  
+                 
+            </div>
+            <div class="panel">
+                <p id="addUserMessage"></p>
+                <form id="addUserForm" method="post">
+                    <label>name</label>
+                    <input type="text" name="name" id="addUserName">
+                    <label>email</label>
+                    <input type="email" name="email" id="addUserEmail">
+                    <button id="addUserButton">add user</button>
+                </form>
+                </div>
+            <table>
+                <thead>
+                      <th>id</th>
+                      <th>name</th>
+                      <th>email</th>
+                      <th>action</th>
+                </thead>
+                <tbody id="usersTable">
+                    <tr>
+                        <td>1</td>
+                        <td>john doe</td>
+                        <td>johndoe@gmail.com</td>
+                        <td><a href="">edit</a><button>delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>john doe</td>
+                        <td>johndoe@gmail.com</td>
+                        <td><a href="">edit</a><button>delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>john doe</td>
+                        <td>johndoe@gmail.com</td>
+                        <td><a href="">edit</a><button>delete</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+      
+    </section> 
+ <script src="../../js/admin.js"></script>   
+</body>
+</html>
