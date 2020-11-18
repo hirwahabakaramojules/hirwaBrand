@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+  scroll-behavior: smooth;
+  /* overflow: scroll; */
+}
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  position: sticky;
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav-links {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  font-size: 20px;
+  padding: 5px 10px;
+  font-family: roboto mono;
+  text-transform: capitalize;
+}
+.join-btn {
+  background-color: white;
+  border: rgba(100, 189, 85, 0.9) solid 3px;
+  padding: 5px 10px;
+  color: white;
+  font-size: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+  padding: 10px 20px;
+}
+.nav-links a:hover {
+  background-color: rgba(100, 189, 85, 0.9);
+  color: white;
+  cursor: pointer;
+}
+.fa-bars {
+  display: none;
+  float: right;
+  margin-top: 40px;
+  right: 50px;
+  position: absolute;
+  font-size: 30px;
+}
+.fa-bars:hover {
+  cursor: pointer;
+  font-size: 40px;
+  opacity: 0.5;
+}
+.welcome {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10%;
+  position: relative;
+  background-image: url(../assets/icyayi.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  overflow: hidden;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.welcome p {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: roboto mono;
+}
+
+.welcome::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.welcome svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  z-index: 5;
+}
+.main-section {
+  display: flex;
+  flex-direction: column;
+}
+.main-section h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: roboto mono;
+  text-align: left;
+  margin-left: 10%;
+  text-transform: capitalize;
+}
+.blog-section {
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 20px;
+  display: block;
+}
+.blog {
+  width: 350px;
+  margin: 20px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.blog img {
+  width: 100%;
+  border-radius: 7.5px;
+}
+.blog h3 {
+  font-size: 28px;
+  text-align: center;
+  font-family: roboto mono;
+  width: 90%;
+}
+.blog p {
+  font-size: 15px;
+  text-align: left;
+  font-family: roboto mono;
+  width: 90%;
+  margin-left: 5%;
+  color: rgba(0, 0, 0, 0.8);
+}
+.blog a {
+  font-size: 20px;
+  text-align: left;
+  font-family: roboto mono;
+  width: 90%;
+  margin-left: 5%;
+  color: rgba(100, 189, 85, 0.9);
+  text-transform: capitalize;
+}
+.subscribe {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.subscribe h6 {
+  font-size: 20px;
+  font-family: roboto mono;
+  text-transform: capitalize;
+}
+.subscribe p {
+  font-size: 15px;
+  font-family: roboto mono;
+  width: 50%;
+  text-align: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.subscribe form {
+  display: flex;
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 30px;
+}
+.subscribe button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+  margin-left: 0px;
+  flex: 0.75;
+  height: 40px;
+  font-family: roboto mono;
+  text-transform: capitalize;
+  font-size: 20px;
+  background-color: rgba(100, 189, 85, 0.9);
+  color: white;
+  outline: none;
+}
+.subscribe input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-right: 0px;
+  flex: 1.25;
+  border: solid rgba(100, 189, 85, 0.9);
+  font-family: roboto mono;
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+}
+footer {
+  min-height: fit-content;
+  width: 100%;
+  display: flex;
+  padding-top: 15px;
+  text-align: center;
+}
+footer p {
+  margin-left: 20px;
+  font-size: 20px;
+  font-family: roboto mono;
+  position: inherit;
+}
+.footer-icons {
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+}
+.footer-icons img {
+  width: 30px;
+  margin: 10px 20px;
+}
+
+@media (max-width: 1100px) {
+  nav {
+    width: 100%;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 770px) {
+  .fa-bars {
+    display: block;
+  }
+  .nav-links {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    right: 0px;
+    margin-top: 100px;
+    transition: 1000ms;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+  }
+  .link {
+    margin: 10px;
+  }
+  .welcome {
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  footer p {
+    margin-top: 50px;
+    width: 100%;
+    margin-left: 0px;
+    text-align: center;
+  }
+  .footer-icons {
+    position: absolute;
+    left: 0;
+  }
+  .footer-icons img {
+    width: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .form-control {
+    width: 100%;
+    margin-left: 0px;
+  }
+  footer p {
+    font-size: 20px;
+  }
+  .footer-icons img {
+    margin: 5px 10px;
+  }
+
+  .subscribe div {
+    display: flex;
+    margin-left: 25px;
+  }
+  .subscribe input {
+    font-size: 15px;
+  }
+  .subscribe button {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .blog-section {
+    width: 100%;
+    margin-left: 0;
+  }
+  .blog {
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section {
+    width: 100%;
+  }
+  .subscribe h6 {
+    font-size: 15px;
+  }
+  footer p {
+    font-size: 15px;
+    margin-top: 60px;
+  }
+}
