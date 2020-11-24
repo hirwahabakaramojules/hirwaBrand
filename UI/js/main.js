@@ -1,3 +1,19 @@
+// firebase config
+var firebaseConfig = {
+  apiKey: "AIzaSyB25XlauyLSyrv6-FOq4scHxofKfuXzHhw",
+  authDomain: "hirwahjules-520b8.firebaseapp.com",
+  databaseURL: "https://hirwahjules-520b8.firebaseio.com",
+  projectId: "hirwahjules-520b8",
+  storageBucket: "hirwahjules-520b8.appspot.com",
+  messagingSenderId: "1014276523246",
+  appId: "1:1014276523246:web:1cd8452cec429ff05d9fff",
+  measurementId: "G-5PXYFR30WJ",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+db.settings({ timeStampsInSnapshots: true });
+
 const burger = document.getElementById("burger");
 const navLinks = document.getElementById("nav");
 const msgForm = document.querySelector("#msg-form");
@@ -13,6 +29,21 @@ burger.addEventListener("click", () => {
       navLinks.style.display = "none";
   }
 });
+// functions
+const saveMessages = (name, email, message) => {
+  try {
+    db.collection("messages").add({
+      name,
+      email,
+      message,
+    });
+  } catch (error) {
+    if (error) {
+      console.log(error);
+    }
+  }
+};
+
 const logError = (input, message) => {
   const section = input.parentElement;
   const errMsg = section.querySelector("p");
