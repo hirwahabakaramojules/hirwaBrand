@@ -1,3 +1,23 @@
+var firebaseConfig = {
+  apiKey: "AIzaSyB25XlauyLSyrv6-FOq4scHxofKfuXzHhw",
+  authDomain: "hirwahjules-520b8.firebaseapp.com",
+  databaseURL: "https://hirwahjules-520b8.firebaseio.com",
+  projectId: "hirwahjules-520b8",
+  storageBucket: "hirwahjules-520b8.appspot.com",
+  messagingSenderId: "1014276523246",
+  appId: "1:1014276523246:web:1cd8452cec429ff05d9fff",
+  measurementId: "G-5PXYFR30WJ",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    console.log(user);
+  } else {
+    console.log("not loged in");
+  }
+});
 // declarations
 const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const burger = document.getElementById("burger");
@@ -78,9 +98,23 @@ registerForm.addEventListener("submit", (e) => {
   if (checkArr.length > 0) {
     return false;
   } else {
-    registerForm.reset();
-    setTimeout(() => {
-      i.forEach((icon) => (icon.style.display = "none"));
-    }, 3000);
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email.value, password.value)
+      .then(() => {
+        window.location = "./blogHome.html";
+        registerForm.reset();
+        setTimeout(() => {
+          i.forEach((icon) => (icon.style.display = "none"));
+        }, 3000);
+      })
+      .catch((error) => {
+        if (error) {
+          console.log({
+            errorCode: error.code,
+            errorMsg: error.message,
+          });
+        }
+      });
   }
 });
