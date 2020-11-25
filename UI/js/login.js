@@ -1,3 +1,15 @@
+var firebaseConfig = {
+  apiKey: "AIzaSyB25XlauyLSyrv6-FOq4scHxofKfuXzHhw",
+  authDomain: "hirwahjules-520b8.firebaseapp.com",
+  databaseURL: "https://hirwahjules-520b8.firebaseio.com",
+  projectId: "hirwahjules-520b8",
+  storageBucket: "hirwahjules-520b8.appspot.com",
+  messagingSenderId: "1014276523246",
+  appId: "1:1014276523246:web:1cd8452cec429ff05d9fff",
+  measurementId: "G-5PXYFR30WJ",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 // declarations
 const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const burger = document.getElementById("burger");
@@ -47,6 +59,13 @@ const checkForm = async (email, password) => {
 };
 
 // event listeners
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    console.log("user auth", user.email);
+  } else {
+    console.log("user not auth");
+  }
+});
 
 burger.addEventListener("click", () => {
   console.log("clicjed");
@@ -76,14 +95,26 @@ loginForm.addEventListener("submit", (e) => {
   });
   if (checkArr.length > 0) {
     return false;
+  } else {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email.value, password.value)
+      .then((data) =>
+        data.user.email === "admin@me.com"
+          ? (window.location = "./admin/admin.html")
+          : (window.location = "./blogHome.html")
+      )
+      .catch((error) => {
+        console.log(error);
+      });
+    loginForm.reset();
+    setTimeout(() => {
+      i.forEach((icon) => {
+        icon.style.display = "none";
+        console.log(icon);
+      });
+    }, 3000);
   }
-  loginForm.reset();
-  setTimeout(() => {
-    i.forEach((icon) => {
-      icon.style.display = "none";
-      console.log(icon);
-    });
-  }, 3000);
 });
 
 console.log();
