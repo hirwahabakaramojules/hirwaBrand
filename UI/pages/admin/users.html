@@ -33,11 +33,7 @@
         </div>
         <div class="content">
             <h3>manage users</h3>
-            <div class="badges">
-                <button href="./" id="accordion">add User</button>
-                <p>subscribed users <span class="subscribed">32</span></p>  
-                 
-            </div>
+            
             <div class="panel">
                 <p id="addUserMessage"></p>
                 <form id="addUserForm" method="post">
@@ -50,13 +46,10 @@
                 </div>
             <table>
                 <thead>
-                      <th>id</th>
-                      <th>name</th>
-                      <th>email</th>
-                      <th>action</th>
+                      <th>subs</th>
                 </thead>
                 <tbody id="usersTable">
-                    <tr>
+                    <!-- <tr>
                         <td>1</td>
                         <td>john doe</td>
                         <td>johndoe@gmail.com</td>
@@ -73,13 +66,15 @@
                         <td>john doe</td>
                         <td>johndoe@gmail.com</td>
                         <td><a href="">edit</a><button>delete</button></td>
-                    </tr>
+                    </tr> -->
                     
                 </tbody>
             </table>
         </div>
       
     </section> 
- <script src="../../js/admin.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+ <script src="../../js/admin/admin.js"></script>   
 </body>
 </html>
