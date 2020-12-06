@@ -33,18 +33,18 @@
         </div>
         <div class="content">
             <h3>create blogs</h3>
-            <form method="post" id="form">
+            <form id="form">
                 <section>
                     <label for="title">title</label>
                     <input type="text" name="title" id="title" required>
                 </section>
                 <section>
                     <label for="description">description</label>
-                    <textarea name="" id="textarea" required></textarea>
+                    <textarea name="body" id="textarea" required></textarea>
                 </section>
                 <section>
                     <label for="thumbnail">add image</label>
-                    <input type="file" id="tumbnail" name="thumbnail" id="">
+                    <input type="file" id="thumbnail" name="thumbnail" id="">
                 </section>
                 <button>post blog</button>
             </form>
@@ -52,6 +52,9 @@
         </div>
       
     </section> 
-    <script src="https://cdn.ckeditor.com/ckeditor5/21.0.0/classic/ckeditor.js"></script>  
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    <script src="../../js/admin/admin.js"></script>
 </body>
 </html>

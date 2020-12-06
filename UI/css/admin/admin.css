@@ -209,7 +209,7 @@ td button{
     cursor: pointer;
 }
 #form section{
-    width: 50%;
+    width: 90%;
     margin-top: 1.5rem;
     display: block;
     margin-left: auto;
@@ -236,7 +236,7 @@ td button{
     border: 2px solid rgba(100, 189, 85, 0.9)
 }
 textarea{
-    min-height: 3rem;
+    min-height: 9rem;
     border: 2px solid rgba(100, 189, 85, 0.9)
 }
 #form button{
