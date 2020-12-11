@@ -40,18 +40,23 @@
                 </section>
                 <section>
                     <label for="description">description</label>
-                    <textarea name="" id="textarea" required></textarea>
+                    <textarea name="" id="body" required></textarea>
                 </section>
                 <section>
-                    <label for="thumbnail">add image</label>
-                    <input type="file" id="tumbnail" name="thumbnail" id="">
+                    <label for="thumbnail" id="thumbnail-label">add image</label>
+                    <input type="file" id="thumbnail" name="thumbnail" id="">
                 </section>
-                <button>post blog</button>
+                <button id="sub-btn">post blog</button>
             </form>
             
         </div>
       
     </section> 
-    <script src="https://cdn.ckeditor.com/ckeditor5/21.0.0/classic/ckeditor.js"></script>  
+     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+     <!-- <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script> -->
+     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    <script src="../../js/admin/createBlog.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/21.0.0/classic/ckeditor.js"></script>   -->
 </body>
 </html>
